@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .weather-container {
+            margin-top: 20px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .weather-info {
+            text-align: center;
+        }
+
+        .weather-info img {
+            max-width: 100px;
+            margin-top: 10px;
+        }
+
+        .weather-info p {
+            margin-top: 10px;
+        }
+
+        .back-btn {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-btn a {
+            display: inline-block;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Weather App</h1>
+    <div class="weather-container">
+        <div class="weather-info">
+            <h2>{{city}}</h2>
+            <img src="https://openweathermap.org/img/w/{{iconCode}}.png" alt="Weather Icon" >
+            <p>{{description}}</p>
+            <p>Температура: {{temperature}}°C</p>
+            <p>Вологість: {{humidity}}%</p>
+            <p>Тиск: {{pressure}} hPa</p>
+        </div>
+        <div class="back-btn">
+            <a href="/">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
